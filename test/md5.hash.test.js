@@ -43,7 +43,7 @@ function(Hash) {
       var hash = new Hash();
       hash.update('chris:elwood.innosoft.com:secret');
     
-      it('should have correct output', function() {
+      it('should throw', function() {
         expect(function() {
           hash.digest('fubar');
         }).to.throw();
@@ -52,5 +52,5 @@ function(Hash) {
   
   });
 
-  return { name: "test.md5" }
+  return { name: "test.md5.hash" }
 });
