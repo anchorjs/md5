@@ -38,6 +38,17 @@ function(Hash) {
         expect(hash.digest('base64')).to.equal('61p1AFPk0sNKqEu8mwtu5w==');
       });
     });
+    
+    describe('unknown encoding digest', function() {
+      var hash = new Hash();
+      hash.update('chris:elwood.innosoft.com:secret');
+    
+      it('should have correct output', function() {
+        expect(function() {
+          hash.digest('fubar');
+        }).to.throw();
+      });
+    });
   
   });
 
