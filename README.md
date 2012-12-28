@@ -12,6 +12,28 @@ For more information on using volo to manage JavaScript modules, visit [http://v
 
 ## Usage
 
+#### Hash
+
+Create hash digests of data.
+
+```javascript
+var md5sum = md5.createHash();
+md5sum.update('Hello');
+md5sum.update('World');
+var d = md5sum.digest('hex');
+```
+
+#### Hmac
+
+Create cryptographic hmac content.
+
+```javascript
+var md5hmac = md5.createHmac('key');
+md5hmac.update('Hello');
+md5hmac.update('World');
+var d = md5hmac.digest('hex');
+```
+
 ## Tests
 
 ##### Browser
