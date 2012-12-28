@@ -6,7 +6,8 @@ function(require, mocha, chai, cloud) {
   mocha.setup('bdd');
   expect = chai.expect
   
-  require(['test/md5.test'],
+  require(['test/md5.test',
+           'test/md5.hash.test'],
   function() {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
     else { cloud(mocha.run()); }
