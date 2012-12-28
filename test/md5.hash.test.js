@@ -3,6 +3,24 @@ function(Hash) {
 
   describe('Hash', function() {
     
+    describe('binary digest as default argument', function() {
+      var hash = new Hash();
+      hash.update('chris:elwood.innosoft.com:secret');
+    
+      it('should have correct output', function() {
+        expect(hash.digest()).to.equal('ëZu\u0000SäÒÃJ¨K¼\u000bnç');
+      });
+    });
+    
+    describe('binary digest', function() {
+      var hash = new Hash();
+      hash.update('chris:elwood.innosoft.com:secret');
+    
+      it('should have correct output', function() {
+        expect(hash.digest('binary')).to.equal('ëZu\u0000SäÒÃJ¨K¼\u000bnç');
+      });
+    });
+    
     describe('hex digest', function() {
       var hash = new Hash();
       hash.update('chris:elwood.innosoft.com:secret');
