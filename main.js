@@ -1,6 +1,7 @@
 define(['exports',
-        './lib/hash'],
-function(exports, Hash) {
+        './lib/hash',
+        './lib/hmac'],
+function(exports, Hash, Hmac) {
 
   exports.algo = 'md5';
 
@@ -8,5 +9,10 @@ function(exports, Hash) {
     return new Hash();
   }
   exports.Hash = Hash;
+  
+  exports.createHmac = function() {
+    return new Hmac();
+  }
+  exports.Hmac = Hmac;
 
 });
