@@ -20,6 +20,20 @@ function(md5) {
         expect(md5.createHash()).to.be.an.instanceOf(md5.Hash);
       });
     });
+    
+    it('should export createHmac', function() {
+      expect(md5.createHmac).to.be.a('function');
+    });
+    
+    it('should export Hmac', function() {
+      expect(md5.Hmac).to.be.a('function');
+    });
+    
+    describe('.createHmac()', function() {
+      it('should create instance of Hmac', function() {
+        expect(md5.createHmac()).to.be.an.instanceOf(md5.Hmac);
+      });
+    });
   
   });
 

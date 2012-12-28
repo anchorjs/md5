@@ -10,8 +10,8 @@ function(exports, Hash, Hmac) {
   }
   exports.Hash = Hash;
   
-  exports.createHmac = function() {
-    return new Hmac();
+  exports.createHmac = function(key) {
+    return new Hmac(key);
   }
   exports.Hmac = Hmac;
 
