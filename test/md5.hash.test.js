@@ -30,6 +30,15 @@ function(Hash) {
       });
     });
     
+    describe('hex digest with data containing weird characters', function() {
+      var hash = new Hash();
+      hash.update('ëZu\u0000SäÒÃJ¨K¼\u000bnç:OA6MG9tEQGm2hh:OA6MHXh6VqTrRk');
+    
+      it('should have correct output', function() {
+        expect(hash.digest('hex')).to.equal('a2549853149b0536f01f0b850c643c57');
+      });
+    });
+    
     describe('base64 digest', function() {
       var hash = new Hash();
       hash.update('chris:elwood.innosoft.com:secret');
