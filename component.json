@@ -1,0 +1,14 @@
+{
+  "name": "md5",
+  "version": "0.0.0",
+  "description": "MD5 module for Anchor.js.",
+  "repo": "anchorjs/md5",
+  "main": "main.js",
+  "scripts": [
+    "main.js",
+    "lib/hash.js",
+    "lib/hmac.js",
+    "lib/md5.js"
+  ],
+  "license": "MIT"
+}
