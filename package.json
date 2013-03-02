@@ -1,6 +1,6 @@
 {
   "name": "md5",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "MD5 module for Anchor.js.",
   "repository": {
     "type": "git",
